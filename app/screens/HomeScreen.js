@@ -8,6 +8,7 @@ import colors from '../config/colors';
 
 import MoodScreen from './MoodScreen.js';
 import QuoteScreen from './QuoteScreen.js';
+import ThoughtScreen from './ThoughtScreen.js';
 
 function HomeScreen(props) {
 
@@ -16,6 +17,7 @@ function HomeScreen(props) {
 
   return (
     <Container style={styles.container}>
+
     {/* Header of the App */}
     <Header style={styles.header}>
       <Left>
@@ -30,9 +32,9 @@ function HomeScreen(props) {
 
     {/* Body of the Home Screen */}
 
-      <ImageBackground imageStyle={{opacity: 0.5}}style={styles.image} source={require('../config/clouds.jpg')}>
+      <ImageBackground imageStyle={{opacity: 0.5}} style={styles.image} source={require('../config/clouds.jpg')}>
         <Body style={styles.homeBody}>
-          <MoodScreen />
+          <ThoughtScreen />
         </Body>
        </ImageBackground>
 
@@ -62,6 +64,8 @@ function HomeScreen(props) {
   </Container>
   );
 }
+
+
 const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   container: {
@@ -80,7 +84,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.secondary,
   },
   homeBody: {
-    top: 80,
+    top: 40,
     opacity: 1,
   },
   image:{
