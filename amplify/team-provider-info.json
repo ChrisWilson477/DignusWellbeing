@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-dignuswellbeing-dev-84316-authRole",
+      "UnauthRoleArn": "arn:aws:iam::745214215081:role/amplify-dignuswellbeing-dev-84316-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::745214215081:role/amplify-dignuswellbeing-dev-84316-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-dignuswellbeing-dev-84316-deployment",
+      "UnauthRoleName": "amplify-dignuswellbeing-dev-84316-unauthRole",
+      "StackName": "amplify-dignuswellbeing-dev-84316",
+      "StackId": "arn:aws:cloudformation:us-east-1:745214215081:stack/amplify-dignuswellbeing-dev-84316/132dff70-4c48-11eb-9a2a-1298984999a5",
+      "AmplifyAppId": "d30vtb5ql5a8k7"
+    },
+    "categories": {
+      "auth": {
+        "dignuswellbeing76e5517a": {}
+      }
+    }
+  }
+}

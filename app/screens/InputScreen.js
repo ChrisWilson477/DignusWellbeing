@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
     height: 40,
     borderColor: colors.primary,
     borderWidth: 1,
+    padding: 5
 
   },
   inputText: {
@@ -55,6 +56,7 @@ const styles = StyleSheet.create({
   },
   inputView:{
     paddingVertical: 20,
+    top: 20
   }
 })
 export default InputScreen;
