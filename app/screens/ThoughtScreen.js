@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import colors from '../config/colors';
 
 
-function ThoughtScreen({ navigation, scroller }) {
+function ThoughtScreen({ navigation }) {
 
   const [clicked, setClicked] = useState(false);
 
@@ -94,6 +94,7 @@ function ThoughtScreen({ navigation, scroller }) {
     </Container>
   );
 }
+
 
 const styles = StyleSheet.create({
   backgroundImage:{

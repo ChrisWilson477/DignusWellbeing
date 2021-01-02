@@ -23,31 +23,31 @@ function MoodScreen({ navigation }) {
           { !clicked
           ? <View >
             <View style={styles.moodBody}>
-              <TouchableOpacity onPress ={()=> setClicked(true)}>
+              <TouchableOpacity  onPress ={()=> setClicked(true)}>
                 <View>
                   <Icon style={styles.circleIcon} />
                   <Icon style={styles.icon} type ='FontAwesome5'name="grin-beam" />
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity onPress ={()=> setClicked(true)}>
+              <TouchableOpacity  onPress ={()=> setClicked(true)}>
                 <View>
                   <Icon style={styles.circleIcon}/>
                   <Icon style={styles.icon} type ='FontAwesome5'name="grin" />
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity onPress ={()=> setClicked(true)}>
+              <TouchableOpacity  onPress ={()=> setClicked(true)}>
                 <View>
                   <Icon style={styles.circleIcon}/>
                   <Icon style={styles.icon} type ='FontAwesome5'name="meh" />
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity onPress ={()=> setClicked(true)}>
+              <TouchableOpacity  onPress ={()=> setClicked(true)}>
                 <View>
                   <Icon style={styles.circleIcon}/>
                   <Icon style={styles.icon} type ='FontAwesome5'name="frown" />
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity onPress ={()=> setClicked(true)}>
+              <TouchableOpacity  onPress ={()=> setClicked(true)}>
                 <View>
                   <Icon style={styles.circleIcon}/>
                   <Icon style={styles.icon} type ='FontAwesome5'name="tired" />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
-import { StyleSheet, ImageBackground, Image, View, Dimensions } from 'react-native';
+import { SafeAreaView, StyleSheet, ImageBackground, Image, View, Dimensions } from 'react-native';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import colors from '../config/colors';
@@ -19,8 +19,9 @@ Amplify.configure({
 import MoodScreen from './MoodScreen.js';
 import QuoteScreen from './QuoteScreen.js';
 import ThoughtScreen from './ThoughtScreen.js';
+import CarouselCards from '../config/CarouselCards.js';
 
-function HomeScreen({ navigation}) {
+function HomeScreen({ navigation, signedIn}) {
 
 
 
@@ -40,7 +41,19 @@ function HomeScreen({ navigation}) {
 
       <ImageBackground imageStyle={{opacity: 0.5}} style={styles.image} source={require('../config/clouds.jpg')}>
         <Body style={styles.homeBody}>
-         <QuoteScreen />
+          {/* <View style={styles.quoteBackground}>
+            <Icon style={styles.quoteIcon} type='MaterialCommunityIcons' name='comment-quote-outline' />
+              <Text style={styles.quote}>Between stimulus and response there is a space. In that space is our power to choose our response. In our response lies our growth and our freedom.</Text>
+              <Text style={styles.quote}>Viktor Frankl</Text>
+          </View> */}
+          <View style={styles.focusText}>
+          <Text style={styles.header}>What's Your Focus Today?</Text>
+          </View>
+          <SafeAreaView style={styles.carousel}>
+          <CarouselCards />
+          </SafeAreaView>
+
+
         </Body>
        </ImageBackground>
 
@@ -61,10 +74,6 @@ function HomeScreen({ navigation}) {
           <Icon style={styles.icon} type ='FontAwesome5'name="brain"/>
           <Text style={styles.icon}>Thoughts</Text>
         </Button>
-        <Button vertical>
-          <Icon style={styles.icon} type ='FontAwesome5' name="quote-left"/>
-          <Text style={styles.icon}>Quotes</Text>
-        </Button>
       </FooterTab>
     </Footer>
   </Container>
@@ -74,6 +83,9 @@ function HomeScreen({ navigation}) {
 
 const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
+  carousel:{
+    paddingTop: 20
+  },
   container: {
     backgroundColor: colors.background,
     position: 'relative',
@@ -82,15 +94,22 @@ const styles = StyleSheet.create({
   icon: {
     color: 'white'
   },
+  focusText:{
+    top: 30
+  },
   footerTab: {
       backgroundColor: colors.secondary,
       bottom: 0,
     },
   header:{
-    backgroundColor: colors.secondary,
+    color: colors.primary,
+    fontSize: 26,
+    paddingBottom: 10,
+    bottom: 20,
+    fontWeight: 'bold'
   },
   homeBody: {
-    top: 40,
+    top: 0,
     opacity: 1,
   },
   image:{
@@ -98,13 +117,34 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center'
   },
+  quote:{
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'white',
+    textAlign: 'left',
+    paddingLeft: 60,
+    paddingRight: 10,
+    paddingTop: 5,
+    bottom: 40
+
+  },
+  quoteBackground:{
+    backgroundColor: colors.primary,
+    height: 130
+  },
+  quoteIcon:{
+    color: 'white',
+    fontSize: 50,
+    justifyContent: 'center',
+    top: 40
+  },
   title: {
     flex: 1,
     fontSize: 28,
     top: 10,
     left: -40,
     fontFamily: 'sans-serif-medium'
-  }
+  },
 
 });
 
