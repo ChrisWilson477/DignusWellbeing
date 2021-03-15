@@ -3,13 +3,22 @@ import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Rig
 import { StyleSheet, Pressable } from 'react-native';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
+
+//Navigation
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
+//Authorization
 import { Auth } from 'aws-amplify';
+
+
+
+
 import colors from './app/config/colors.js';
 import HomeScreen from './app/screens/HomeScreen';
 import MoodScreen from './app/screens/MoodScreen';
 import ThoughtScreen from './app/screens/ThoughtScreen';
+import TrackerScreen from './app/screens/TrackerScreen';
 
 
 
@@ -20,11 +29,12 @@ const Stack = createStackNavigator();
     super(props);
     this.state = {
       isReady: false,
-      signedIn: false
+      signedIn: false,
     };
   }
 
 
+   //SignOut
    signOut = async () => {
     try {
       await Auth.signOut({ global: true });
@@ -32,6 +42,11 @@ const Stack = createStackNavigator();
       console.log('error signing out: ', error);
     }
   };
+
+
+
+
+
 
 
   render() {
@@ -66,7 +81,22 @@ const Stack = createStackNavigator();
             component={MoodScreen}
             options={{
               title: 'Dignus Wellbeing',
-              headerRight:  () => (<Icon style={styles.icon} type='FontAwesome5' name='spa'/>),
+              headerStyle: {
+                backgroundColor: colors.secondary,
+              },
+              headerTintColor: '#fff',
+              headerTitleStyle: {
+                fontSize: 28,
+                alignSelf: 'center',
+                right: 25
+              },
+            }}
+          />
+          <Stack.Screen
+            name='Tracker'
+            component={TrackerScreen}
+            options={{
+              title: 'Dignus Wellbeing',
               headerStyle: {
                 backgroundColor: colors.secondary,
               },
@@ -82,14 +112,15 @@ const Stack = createStackNavigator();
             component={ThoughtScreen}
             options={{
               title: 'Dignus Wellbeing',
-              headerRight:  () => (<Icon style={styles.icon} type='FontAwesome5' name='spa'/>),
+
               headerStyle: {
                 backgroundColor: colors.secondary,
               },
               headerTintColor: '#fff',
               headerTitleStyle: {
                 fontSize: 28,
-                alignSelf: 'center'
+                alignSelf: 'center',
+                right: 25
               },
             }}
           />

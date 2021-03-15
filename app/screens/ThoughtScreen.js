@@ -38,7 +38,12 @@ function ThoughtScreen({ navigation }) {
               source={require('../config/blackWhite.jpeg')}
             />
               <Text style={styles.paragraph}>
-              Only thinking about the ends of a spectrum, black or white, no gray area.Generally, this includes thoughts such as always or never, do or don’t, right or wrong, and forgets all the possibilities in between, such as sometime right, but other times wrong. For example, Janice is a mother to her first child. She has not had much experience with children and feels somewhat anxious about thehuge responsibility she has taken on. She considers each action and decides whether it means she is agood mother or a bad mother. Janice fails to see that there are many variations on actions, in the same way that telling a lie can be considered a “bad” thing, but allowing a little white lie to help your child believe in a specific magical being can be acceptable.
+              Only thinking about the ends of a spectrum, black or white, no gray area.Generally, this includes thoughts such as: always or never, do or don’t, right or wrong, and forgets all the possibilities in between, such as sometime right, but other times wrong.
+              </Text>
+              <Text style={styles.example}>
+                For example:
+              </Text>
+              <Text style={styles.exampleParagraph}> Janice is a mother to her first child. She has not had much experience with children and feels somewhat anxious about thehuge responsibility she has taken on. She considers each action and decides whether it means she is agood mother or a bad mother. Janice fails to see that there are many variations on actions, in the same way that telling a lie can be considered a “bad” thing, but allowing a little white lie to help your child believe in a specific magical being can be acceptable.
               </Text>
           </ScrollView>}
 
@@ -61,9 +66,17 @@ function ThoughtScreen({ navigation }) {
               accessibilityLabel={'Man with face in palms'}
 
             />
+            <View>
               <Text style={styles.paragraph}>
-              Thinking that if something happened once or twice it will happen again, or if something worked or didn’t work for someone, it will be the same for everyone. Making a broader statement from something more individual. For example: Stephen read about the benefits of yoga for reducing anxiety and stress. He shares with his colleague that he is thinking about starting to practice yoga. His colleague tells him he tried it once and didn’t notice a difference. Stephen decides that yoga doesn’t really work and does not pursue his interest in trying it for himself. Stephen fails to consider that his friend may have not had a good experience, or a good instructor, or even tried the right type of yoga for himself. He failed to consider the individual differences in people and in yoga.
+                Thinking that if something happened once or twice it will happen again, or if something worked or didn’t work for someone, it will be the same for everyone. Making a broader statement from something more individual.
               </Text>
+              <Text style={styles.example}>
+                For example:
+              </Text>
+              <Text style={styles.exampleParagraph}>
+                 Stephen read about the benefits of yoga for reducing anxiety and stress. He shares with his colleague that he is thinking about starting to practice yoga. His colleague tells him he tried it once and didn’t notice a difference. Stephen decides that yoga doesn’t really work and does not pursue his interest in trying it for himself. Stephen fails to consider that his friend may have not had a good experience, or a good instructor, or even tried the right type of yoga for himself. He failed to consider the individual differences in people and in yoga.
+              </Text>
+            </View>
           </ScrollView>}
 
 
@@ -84,9 +97,16 @@ function ThoughtScreen({ navigation }) {
               accessible={true}
               accessibilityLabel={'Brain and heart split down the middle with a microchip background on the brain side and paint splattered on the heart side'}
             />
+            <View>
               <Text style={styles.paragraph}>
-              Believing that because we feel a certain way, the situation must be true. For example: Dineshni was a lady in grad school. Her teacher decided to have a fun evening and made a game of jeopardy to practice for the test. Dineshni becomes anxious at having to quickly come up with the answers and feels embarrassed because she is not answering the questions quickly like her classmates. Dineshni believes she is an idiot because she is not coming up with the answers, even though on her tests she always gets nearly perfect grades.
+                Believing that because we feel a certain way, the situation must be true.
               </Text>
+              <Text style={styles.example}>
+                For example:
+              </Text>
+              <Text style={styles.exampleParagraph}>Dineshni was a lady in grad school. Her teacher decided to have a fun evening and made a game of jeopardy to practice for the test. Dineshni becomes anxious at having to quickly come up with the answers and feels embarrassed because she is not answering the questions quickly like her classmates. Dineshni believes she is an idiot because she is not coming up with the answers, even though on her tests she always gets nearly perfect grades.
+              </Text>
+            </View>
           </ScrollView>}
 
       </Content>
@@ -102,18 +122,26 @@ const styles = StyleSheet.create({
       justifyContent: 'flex-end',
       alignItems: 'center'
     },
-    bottomImage:{
+  bottomImage:{
       height: 150,
       width: 400,
       right: 7
-    },
+  },
+  example: {
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  exampleParagraph:{
+    paddingBottom: 20,
+    textAlign: 'center'
+  },
   image:{
     height: 150,
     width: 450,
   },
 
   imageClicked:{
-    width: 450,
+    width: '100%',
     height: 350
   },
   paragraph:{

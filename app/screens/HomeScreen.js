@@ -6,6 +6,8 @@ import { Ionicons } from '@expo/vector-icons';
 import colors from '../config/colors';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
+//Amplify
 import { withAuthenticator } from 'aws-amplify-react-native';
 import Amplify from 'aws-amplify';
 import config from '../config/aws-exports';
@@ -16,6 +18,7 @@ Amplify.configure({
   },
 });
 
+//Screens
 import MoodScreen from './MoodScreen.js';
 import QuoteScreen from './QuoteScreen.js';
 import ThoughtScreen from './ThoughtScreen.js';
@@ -47,10 +50,10 @@ function HomeScreen({ navigation, signedIn}) {
               <Text style={styles.quote}>Viktor Frankl</Text>
           </View> */}
           <View style={styles.focusText}>
-          <Text style={styles.header}>What's Your Focus Today?</Text>
+          <Text style={styles.header}>What is Your Focus Today?</Text>
           </View>
           <SafeAreaView style={styles.carousel}>
-          <CarouselCards />
+          <CarouselCards  />
           </SafeAreaView>
 
 
@@ -69,6 +72,10 @@ function HomeScreen({ navigation, signedIn}) {
         <Button vertical onPress={()=> navigation.navigate('Mood')}>
           <Icon style={styles.icon} type ='FontAwesome5'name="grin-alt" />
           <Text style={styles.icon}>Mood</Text>
+        </Button>
+        <Button vertical onPress={()=> navigation.navigate('Tracker')}>
+          <Icon style={styles.icon} type ='FontAwesome'name="area-chart" />
+          <Text style={styles.icon}>Tracker</Text>
         </Button>
         <Button vertical onPress={()=> navigation.navigate('Thought')}>
           <Icon style={styles.icon} type ='FontAwesome5'name="brain"/>
@@ -151,7 +158,3 @@ const styles = StyleSheet.create({
 export default withAuthenticator(HomeScreen);
 
 
-        {/* <Button vertical active>
-          <Icon type ='FontAwesome5'name="user-circle"/>
-          <Text>User</Text>
-        </Button> */}

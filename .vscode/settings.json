@@ -7,5 +7,22 @@
     "amplify/#current-cloud-backend": true,
     "amplify/backend/amplify-meta.json": true,
     "amplify/backend/awscloudformation": true
-  }
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#f95df7",
+    "activityBar.activeBorder": "#f3f609",
+    "activityBar.background": "#f95df7",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#f3f609",
+    "activityBarBadge.foreground": "#15202b",
+    "statusBar.background": "#f72cf4",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#f95df7",
+    "titleBar.activeBackground": "#f72cf4",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#f72cf499",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#f72cf4"
 }

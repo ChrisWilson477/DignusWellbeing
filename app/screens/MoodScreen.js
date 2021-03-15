@@ -4,7 +4,9 @@ import { StyleSheet, View, TouchableOpacity, TextInput, ImageBackground } from '
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import colors from '../config/colors';
+
 import InputScreen from './InputScreen.js';
+
 
 function MoodScreen({ navigation }) {
 
